@@ -18,4 +18,35 @@
 
 
 
+    function adjacentElementsProduct(inputArray) {
+
+        function adjacentElementsProduct(inputArray) {
+
+            console.log(inputArray);
+
+            var arr = [];
+            var oneTop = -100;
+            var iPush = 0;
+
+            for (var i = 0; i < inputArray.length - 1; i++) {
+
+                iPush = inputArray[i] * inputArray[i + 1];
+
+                if (iPush > oneTop) {
+                    oneTop = iPush;
+                }
+
+                console.log(oneTop);
+                //console.log(arr.sort( (a, b) => b - a ));
+
+            }
+
+            return oneTop;
+        }
+
+
+    }
+
+    adjacentElementsProduct([3, 6, -2, -5, 7, 3])
+
 })();
