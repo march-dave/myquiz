@@ -59,12 +59,13 @@
 //     var n = parseInt(readLine());
 //     arr = readLine().split(' ');
 
-//     var push = [];
 //     arr = arr.map( Number )
 
 //     //var s = arr.sort( (a, b) => { return a + b } ).join(' ');
 
-//     var arr2 = arr.sort( (a, b) => { return a + b } );
+//     var n = arr.sort( (a, b) => { return a - b } ).shift();
 
-//     console.log( arr2 );
+//     arr.push(n);
+
+//     console.log( arr );
 // }
