@@ -78,3 +78,6 @@ arr.forEach((a, b) => console.log(a + b));
 for (var i = 0; i < arr[i]; i++) {
     console.log(arr[i]);
 }
+
+var p = [];
+p.push()
