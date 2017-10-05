@@ -73,11 +73,12 @@ function main() {
 
 var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
 
-arr.forEach((a, b) => console.log(a + b));
-
-for (var i = 0; i < arr[i]; i++) {
-    console.log(arr[i]);
-}
+//arr.forEach((a, b) => console.log(a + b));
 
 var p = [];
-p.push()
+
+for (var i = 0; i < arr[i]; i++) {
+    p.push(arr[i]);
+}
+
+console.log(p);
