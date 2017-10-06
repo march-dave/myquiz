@@ -75,7 +75,7 @@ var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
 
 var p = [];
 
-for (var i = 0; i < arr[i]; i++) {
+for (var i = 0; i < arr.length; i++) {
 
     var b = p.includes(arr[i]);
 
