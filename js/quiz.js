@@ -73,19 +73,15 @@ function main() {
 
 var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
 
-//arr.forEach((a, b) => console.log(a + b));
-
 var p = [];
 
 for (var i = 0; i < arr[i]; i++) {
 
-    var b = p.include(arr[i]);
+    var b = p.includes(arr[i]);
 
     console.log(b);
 
     p.push(arr[i]);
-
-
 }
 
 console.log(p);
