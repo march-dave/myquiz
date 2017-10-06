@@ -78,7 +78,14 @@ var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
 var p = [];
 
 for (var i = 0; i < arr[i]; i++) {
+
+    var b = p.include(arr[i]);
+
+    console.log(b);
+
     p.push(arr[i]);
+
+
 }
 
 console.log(p);
