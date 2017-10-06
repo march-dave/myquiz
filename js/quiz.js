@@ -79,9 +79,11 @@ for (var i = 0; i < arr.length; i++) {
 
     var b = p.includes(arr[i]);
 
-    console.log(b);
+    if (!b) {
+        p.push(arr[i]);
+    }
 
-    p.push(arr[i]);
+    console.log(b);
 }
 
 console.log(p);
