@@ -71,15 +71,17 @@ function main() {
 }
 
 
-var arr = ['Jone', 'John', 'Jone', 'Tom', 'Tom', 'Bob']
-
+var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
 var p = [];
+var dictionary = {};
 
 for (var i = 0; i < arr.length; i++) {
 
     var b = p.includes(arr[i]);
 
     if (!b) {
+
+        dictionary[arr[i]] = 1;
         p.push(arr[i]);
     }
 }
