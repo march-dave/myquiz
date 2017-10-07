@@ -80,10 +80,13 @@ for (var i = 0; i < arr.length; i++) {
     var b = p.includes(arr[i]);
 
     if (!b) {
-
         dictionary[arr[i]] = 1;
         p.push(arr[i]);
+    } else {
+        var n = dictionary[arr[i]];
+        dictionary[arr[i]] = n + 1;
+        console.log('n', n);
     }
 }
 
-console.log(p);
+console.log(dictionary);
