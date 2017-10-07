@@ -71,7 +71,7 @@ function main() {
 }
 
 
-var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
+var arr = ['Jone', 'John', 'Jone', 'Tom', 'Tom', 'Bob']
 
 var p = [];
 
