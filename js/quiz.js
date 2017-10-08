@@ -92,7 +92,6 @@ for (var i = 0; i < arr.length; i++) {
 console.log(dictionary);
 
 
-// input 
 const posts = [
     { id: 1, likes: [] },
     { id: 2, likes: ['Peter'] },
@@ -101,11 +100,55 @@ const posts = [
     { id: 5, likes: ['Sarah', 'Michelle', 'Alex', 'John'] }
 ];
 
-// out 
-const expectedOutput = [
-    { id: 1, text: 'No one likes this' },
-    { id: 2, text: 'Peter likes this' },
-    { id: 3, text: 'John and Mark like this' },
-    { id: 4, text: 'Paul, Lilly and Alex like this' },
-    { id: 5, text: 'Sarah, Michelle and 2 others like this' }
-];
+var dic;
+var expectedOutput = [];
+
+for (var i = 0; i < posts.length; i++) {
+    // console.log(posts[i].likes.length);
+    if (posts[i].likes.length == 0) {
+        dic = new Object();
+        dic.id = posts[0].id;
+        dic.text = 'No one likes this'
+        expectedOutput.push(dic);
+    } else if (posts[i].likes.length == 1) {
+        dic = new Object();
+        dic.id = posts[0].id;
+
+        var str = posts[i].likes;
+        str += ' likes this';
+        dic.text = str
+        expectedOutput.push(dic);
+
+    } else if (posts[i].likes.length == 2) {
+
+        dic = new Object();
+        dic.id = posts[0].id;
+
+        var str = posts[i].likes;
+
+        str = str.replace(',', ' and ');
+
+        str += ' likes this';
+        dic.text = str
+        expectedOutput.push(dic);
+
+
+    } else if (posts[i].likes.length == 3) {
+
+
+    } else if (posts[i].likes.length == 4) {
+
+
+    }
+}
+
+console.log(expectedOutput);
+
+//   // out 
+// const expectedOutput = [
+//     { id: 1, text: 'No one likes this' },
+//     { id: 2, text: 'Peter likes this' },
+//     { id: 3, text: 'John and Mark like this' },
+//     { id: 4, text: 'Paul, Lilly and Alex like this' },
+//     { id: 5, text: 'Sarah, Michelle and 2 others like this' }
+// ];
