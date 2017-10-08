@@ -104,42 +104,71 @@ var dic;
 var expectedOutput = [];
 
 for (var i = 0; i < posts.length; i++) {
-    // console.log(posts[i].likes.length);
+
+    dic = new Object();
+    dic.id = posts[i].id;
+
     if (posts[i].likes.length == 0) {
-        dic = new Object();
-        dic.id = posts[0].id;
         dic.text = 'No one likes this'
-        expectedOutput.push(dic);
     } else if (posts[i].likes.length == 1) {
-        dic = new Object();
-        dic.id = posts[0].id;
 
         var str = posts[i].likes;
         str += ' likes this';
-        dic.text = str
-        expectedOutput.push(dic);
+        dic.text = str;
 
     } else if (posts[i].likes.length == 2) {
 
-        dic = new Object();
-        dic.id = posts[0].id;
-
         var str = posts[i].likes;
 
-        str = str.replace(',', ' and ');
-
+        str = str.join();
+        str = str.replace(",", " and ");
         str += ' likes this';
         dic.text = str
-        expectedOutput.push(dic);
 
 
     } else if (posts[i].likes.length == 3) {
 
+        var arr = posts[i].likes;
+        var arrRet = [];
+        var str = "";
+        var str2 = "";
 
-    } else if (posts[i].likes.length == 4) {
+        for (j = 0; j < arr.length; j++) {
+            if (j <= 1) {
+                arrRet.push(arr[j]);
+            } else {
+                str2 = arr[j];
+            }
+        }
 
+        str = arrRet.join(", ");
+        str += ' and ' + str2;
+        str += ' likes this';
+        dic.text = str;
+
+    } else if (posts[i].likes.length >= 4) {
+
+        var arr = posts[i].likes;
+        var arrRet = [];
+        var str = "";
+        var str2 = "";
+
+        for (j = 0; j < arr.length; j++) {
+            if (j <= 1) {
+                arrRet.push(arr[j]);
+            } else {
+                str2 = arr.length - 2 + " others";
+            }
+        }
+
+        str = arrRet.join(", ");
+        str += ' and ' + str2;
+        str += ' likes this';
+        dic.text = str;
 
     }
+
+    expectedOutput.push(dic);
 }
 
 console.log(expectedOutput);
