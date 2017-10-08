@@ -72,16 +72,40 @@ function main() {
 
 
 var arr = ['Jone', 'John', 'Jone', 'Tom', 'Bob']
-
 var p = [];
+var dictionary = {};
 
 for (var i = 0; i < arr.length; i++) {
 
     var b = p.includes(arr[i]);
 
     if (!b) {
+        dictionary[arr[i]] = 1;
         p.push(arr[i]);
+    } else {
+        var n = dictionary[arr[i]];
+        dictionary[arr[i]] = n + 1;
+        console.log('n', n);
     }
 }
 
-console.log(p);
+console.log(dictionary);
+
+
+// input 
+const posts = [
+    { id: 1, likes: [] },
+    { id: 2, likes: ['Peter'] },
+    { id: 3, likes: ['John', 'Mark'] },
+    { id: 4, likes: ['Paul', 'Lilly', 'Alex'] },
+    { id: 5, likes: ['Sarah', 'Michelle', 'Alex', 'John'] }
+];
+
+// out 
+const expectedOutput = [
+    { id: 1, text: 'No one likes this' },
+    { id: 2, text: 'Peter likes this' },
+    { id: 3, text: 'John and Mark like this' },
+    { id: 4, text: 'Paul, Lilly and Alex like this' },
+    { id: 5, text: 'Sarah, Michelle and 2 others like this' }
+];
