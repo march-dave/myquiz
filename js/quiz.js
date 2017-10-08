@@ -90,3 +90,22 @@ for (var i = 0; i < arr.length; i++) {
 }
 
 console.log(dictionary);
+
+
+// input 
+const posts = [
+    { id: 1, likes: [] },
+    { id: 2, likes: ['Peter'] },
+    { id: 3, likes: ['John', 'Mark'] },
+    { id: 4, likes: ['Paul', 'Lilly', 'Alex'] },
+    { id: 5, likes: ['Sarah', 'Michelle', 'Alex', 'John'] }
+];
+
+// out 
+const expectedOutput = [
+    { id: 1, text: 'No one likes this' },
+    { id: 2, text: 'Peter likes this' },
+    { id: 3, text: 'John and Mark like this' },
+    { id: 4, text: 'Paul, Lilly and Alex like this' },
+    { id: 5, text: 'Sarah, Michelle and 2 others like this' }
+];
