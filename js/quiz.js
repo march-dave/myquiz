@@ -125,24 +125,23 @@ for (var i = 0; i < posts.length; i++) {
         str += ' likes this';
         dic.text = str
 
-
     } else if (posts[i].likes.length == 3) {
 
         var arr = posts[i].likes;
         var arrRet = [];
         var str = "";
-        var str2 = "";
+        var strAnd = "";
 
         for (j = 0; j < arr.length; j++) {
             if (j <= 1) {
                 arrRet.push(arr[j]);
             } else {
-                str2 = arr[j];
+                strAnd = arr[j];
             }
         }
 
         str = arrRet.join(", ");
-        str += ' and ' + str2;
+        str += ' and ' + strAnd;
         str += ' likes this';
         dic.text = str;
 
@@ -151,18 +150,18 @@ for (var i = 0; i < posts.length; i++) {
         var arr = posts[i].likes;
         var arrRet = [];
         var str = "";
-        var str2 = "";
+        var strAnd = "";
 
         for (j = 0; j < arr.length; j++) {
             if (j <= 1) {
                 arrRet.push(arr[j]);
             } else {
-                str2 = arr.length - 2 + " others";
+                strAnd = arr.length - 2 + " others";
             }
         }
 
         str = arrRet.join(", ");
-        str += ' and ' + str2;
+        str += ' and ' + strAnd;
         str += ' likes this';
         dic.text = str;
 
