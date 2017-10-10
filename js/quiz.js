@@ -180,3 +180,20 @@ console.log(expectedOutput);
 //     { id: 4, text: 'Paul, Lilly and Alex like this' },
 //     { id: 5, text: 'Sarah, Michelle and 2 others like this' }
 // ];
+
+function main() {
+    var n = parseInt(readLine());
+    arr = readLine().split(' ');
+
+    arr = arr.map(Number)
+
+    //var s = arr.sort( (a, b) => { return a + b } ).join(' ');
+
+    var n2 = arr.sort((a, b) => { return a - b }).shift();
+
+    arr.push(n2);
+
+    arr.join(' ');
+
+    console.log(arr.join(' '));
+}
