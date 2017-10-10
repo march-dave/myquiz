@@ -187,13 +187,6 @@ function main() {
 
     arr = arr.map(Number)
 
-    //var s = arr.sort( (a, b) => { return a + b } ).join(' ');
-
-    var n2 = arr.sort((a, b) => { return a - b }).shift();
-
-    arr.push(n2);
-
-    arr.join(' ');
-
-    console.log(arr.join(' '));
+    var str = arr.reverse().join(' ');
+    console.log(str);
 }
