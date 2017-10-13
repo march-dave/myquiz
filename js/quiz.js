@@ -200,7 +200,7 @@ function main() {
 
 }
 
-console.log();
+// console.log();
 
 // 1 1 1 0 0 0
 // 0 1 0 0 0 0
@@ -208,3 +208,8 @@ console.log();
 // 0 9 2 -4 -4 0
 // 0 0 0 -2 0 0
 // 0 0 -1 -2 -4 0
+
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+// roots is now [1, 2, 3]
+// numbers is still [1, 4, 9]
